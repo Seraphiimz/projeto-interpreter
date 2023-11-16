@@ -1,0 +1,33 @@
+<h1>Cadastro Interpretes</h1>
+
+<mat-form-field class="example-full-width">
+  <mat-label>Nome</mat-label>
+  <input matInput [(ngModel)]="interpreterTratamento.nome" placeholder="Digite seu nome">
+</mat-form-field>
+<mat-form-field class="example-full-width">
+  <mat-label>Matricula</mat-label>
+  <input matInput [(ngModel)]="interpreterTratamento.matricula" placeholder="Digite sua matricula">
+</mat-form-field>
+<mat-form-field class="example-full-width">
+  <mat-label>Email</mat-label>
+  <input type="email" matInput [ngModel]="interpreterTratamento.email" placeholder="Ex. pat@example.com">
+</mat-form-field>
+
+<mat-form-field>
+  <mat-label>Turno</mat-label>
+  <select matNativeControl required>
+    <option value="Manhã">Manhã</option>
+    <option value="Tarde">Tarde</option>
+    <option value="Noite">Noite</option>
+    <option value="Madrugada">Madrugada</option>
+  </select>
+</mat-form-field>
+
+<mat-form-field class="example-full-width">
+  <mat-label>Telefone</mat-label>
+  <span matPrefix>+55 &nbsp;</span>
+  <input type="tel" matInput [(ngModel)]="interpreterTratamento.telefone" placeholder="00 00000-0000">
+  <mat-icon matSuffix>mode_edit</mat-icon>
+</mat-form-field>
+
+<button mat-flat-button color="accent" (click)="cadastrar_interpreter()">{{botao}}</button>
